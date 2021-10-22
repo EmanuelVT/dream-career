@@ -25,6 +25,7 @@ body {
 
 .wrapper {
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 
