@@ -1,10 +1,12 @@
 html {
     overflow-x: hidden;
+    height: 100%;
 }
 
 body {
     overflow: scroll;
     overflow-x: hidden;
+    height: 100%;
 
 }
 
@@ -669,7 +671,7 @@ body {
     }
 
     .features {
-        margin-top: 300px;
+        margin-top: 0;
     }
 
     /*  POPUP */
