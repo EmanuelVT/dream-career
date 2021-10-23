@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
 
-    <title>Coach Landing</title>
+    <title>Dream Career</title>
 </head>
 
 <body>
@@ -74,8 +74,8 @@
 
             <section class="features">
                 <div class="features-content">
-                    <h2>Bringing Peace of Mind to Finding the Career of Your Dreams</h2>
-                    <p>Get the professional perspective on your career path</p>
+                    <h2 class="features-header">Bringing Peace of Mind to Finding the Career of Your Dreams</h2>
+                    <p class="features-p">Get the professional perspective on your career path</p>
                     <div class="features-table">
                         <div class="cell">
                             <h3 class="features-title">No fees.</h3>
@@ -101,19 +101,19 @@
             <section class="data">
                 <div class="data-content">
                     <div class="data-table">
-                        <div class="data-cell">
+                        <div class="data-cell clients">
                             <h3>45</h3>
                             <p>clients</p>
                         </div>
-                        <div class="data-cell">
+                        <div class="data-cell countries">
                             <h3>18</h3>
                             <p>countries</p>
                         </div>
-                        <div class="data-cell">
+                        <div class="data-cell users">
                             <h3>5k</h3>
                             <p>users</p>
                         </div>
-                        <div class="data-cell">
+                        <div class="data-cell projects">
                             <h3>1k</h3>
                             <p>projects</p>
                         </div>
@@ -159,20 +159,190 @@
             integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-        <script>
-            gsap.fromTo(".logo", {
-                x: -500
-            }, {
-                x: 0,
-                duration: 1
-            });
+        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
 
-            gsap.fromTo(".icons", {
-                x: 500
+        <script>
+            /* HEADER & HERO ANIMATION*/
+            let heroAni = gsap.timeline();
+
+            heroAni.fromTo(".logo", {
+                    x: -500
+                }, {
+                    x: 0,
+                    duration: 1
+                }).fromTo(".icons", {
+                        x: 500
+                    }, {
+                        x: 0,
+                        duration: 1
+                    },
+                    '>-1')
+                .fromTo(".hero-content", {
+                    x: -500,
+                    opacity: 0
+                }, {
+                    x: 0,
+                    opacity: 1,
+                    duration: 1
+                });
+
+
+            /* FEATURE ANIMATION */
+
+            /*gsap timeline*/
+            let featuresAni = gsap.timeline();
+
+            featuresAni.fromTo(".features-header", {
+                    y: 500,
+                    opacity: 0
+                }, {
+                    y: 0,
+                    opacity: 1,
+                    duration: .5
+                }).fromTo(".features-p", {
+                        y: 500,
+                        opacity: 0
+                    }, {
+                        y: 0,
+                        opacity: 1,
+                        duration: .5
+                    },
+                    '>-.5')
+                .fromTo(".cell", {
+                    y: 500,
+                    opacity: 0
+                }, {
+                    y: 0,
+                    opacity: 1,
+                    duration: .5
+                })
+
+            /* scrollmagic scene */
+            let homeController = new ScrollMagic.Controller();
+
+            let featuresScene = new ScrollMagic.Scene({
+                    triggerElement: ".features",
+                    triggerHook: .8,
+                    reverse: false,
+                    duration: 0
+                })
+                .setTween(featuresAni)
+                .addTo(homeController);
+
+            /* DATA ANIMATION */
+
+            /*gsap timeline*/
+            let dataAni = gsap.timeline();
+
+            dataAni.fromTo(".clients", {
+                    y: 500,
+                    opacity: 0
+                }, {
+                    y: 0,
+                    opacity: 1,
+                    duration: .2
+                })
+                .fromTo(".countries", {
+                    y: 500,
+                    opacity: 0
+                }, {
+                    y: 0,
+                    opacity: 1,
+                    duration: .2
+                })
+                .fromTo(".users", {
+                    y: 500,
+                    opacity: 0
+                }, {
+                    y: 0,
+                    opacity: 1,
+                    duration: .2
+                })
+                .fromTo(".projects", {
+                    y: 500,
+                    opacity: 0
+                }, {
+                    y: 0,
+                    opacity: 1,
+                    duration: .2
+                })
+
+
+            /* scrollmagic scene */
+
+            let dataScene = new ScrollMagic.Scene({
+                    triggerElement: ".data",
+                    triggerHook: .8,
+                    reverse: false,
+                    duration: 0
+                })
+                .setTween(dataAni)
+                .addTo(homeController);
+
+
+
+            /* BIO ANIMATION */
+
+            /* gsap timeline */
+
+            let bioAni = gsap.timeline();
+
+            bioAni.fromTo(".profile-picture", {
+                x: -500,
+                opacity: 0
             }, {
                 x: 0,
+                opacity: 1,
                 duration: 1
-            });
+            }).fromTo(".bio-text", {
+                x: 500,
+                opacity: 0
+            }, {
+                x: 0,
+                opacity: 1,
+                duration: 1
+            }, '>-1')
+
+
+            /* scrollmagic scene */
+
+            let bioScene = new ScrollMagic.Scene({
+                    triggerElement: ".bio",
+                    triggerHook: .8,
+                    reverse: false,
+                    duration: 0
+                })
+                .setTween(bioAni)
+                .addTo(homeController);
+
+
+            /* ACTIONCALL ANIMATION */
+
+            /* gsap animation*/
+
+            let actionAni = gsap.timeline();
+
+            actionAni.fromTo(".actioncall-content", {
+                y: 500,
+                opacity: 0
+            }, {
+                y: 0,
+                opacity: 1,
+                duration: 1
+            })
+
+            /* scrollmagic scene */
+
+            let actionScene = new ScrollMagic.Scene({
+                    triggerElement: ".actioncall",
+                    triggerHook: .8,
+                    reverse: false,
+                    duration: 0
+                })
+                .setTween(actionAni)
+                .addTo(homeController);
         </script>
 
     </div>

@@ -1,5 +1,5 @@
 var body = document.querySelector("body");
-var grayScreen = document.querySelector(".gray-screen");
+var grayScreen = document.querySelector(".pop-up");
 var button = document.querySelector(".button");
 var button2 = document.querySelector(".button-bottom");
 var exitButton = document.querySelector(".lni-close");

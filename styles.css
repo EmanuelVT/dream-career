@@ -37,6 +37,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 20vh;
+    background: white;
 }
 
 .header .logo {
@@ -323,9 +324,7 @@ body {
 
 /* POP UP */
 
-.gray-screen {
-    display: none;
-}
+.gray-screen {}
 
 
 .pop-up {
@@ -337,6 +336,9 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s all ease-in-out;
 }
 
 .email-window {
@@ -347,7 +349,8 @@ body {
 }
 
 .active {
-    display: block;
+    visibility: visible;
+    opacity: 1;
 }
 
 .close-button {
