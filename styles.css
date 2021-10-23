@@ -713,3 +713,9 @@ body {
         font-size: 0.8rem;
     }
 }
+
+@media screen and (max-height: 505px) {
+    .email-window {
+        height: 80%;
+    }
+}
