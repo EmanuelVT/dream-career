@@ -714,8 +714,14 @@ body {
     }
 }
 
-@media screen and (max-height: 505px) {
+@media screen and (max-height: 565px) {
     .email-window {
-        height: 80%;
+        height: 90%;
+    }
+}
+
+@media screen and (max-height: 372px) {
+    .email-window {
+        height: 100%;
     }
 }
