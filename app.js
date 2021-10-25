@@ -62,6 +62,7 @@ app.post('/signup', (req,res) => {
                 res.redirect('/fail.html');
                 console.log("There was a mistake");
                 console.log(response.statusCode);
+                console.log(api_key);
             }
         }
     })
