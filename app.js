@@ -61,6 +61,7 @@ app.post('/signup', (req,res) => {
             } else{
                 res.redirect('/fail.html');
                 console.log("There was a mistake");
+                console.log(response.statusCode);
             }
         }
     })
