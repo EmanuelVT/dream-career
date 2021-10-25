@@ -2,6 +2,7 @@ const express = require('express');
 const request = require('request');
 const bodyParser = require('body-parser');
 const path = require('path');
+require('dotenv').config();
 
 
 const app = express();
@@ -35,12 +36,13 @@ app.post('/signup', (req,res) => {
     }
 
     const postData = JSON.stringify(data);
+    const api_key = process.env.API_KEY;
 
     const options = {
         url: 'https://us2.api.mailchimp.com/3.0/lists/8322819500',
         method: 'POST',
         headers: {
-            Authorization: 'auth 6a444f44be3422f20552d6785d80dc51-us2'
+            Authorization: `auth ${api_key}`
         },
         body: postData
     }
@@ -56,8 +58,7 @@ app.post('/signup', (req,res) => {
 
 
             } else{
-                res.redirect("/index.html");
-                console.log("Failure");
+                res.redirect('/fail.html');;
             }
         }
     })
