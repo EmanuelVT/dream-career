@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+.container h3 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    padding-bottom: 3rem;
+}
+
+.container h4 {
+    padding-bottom: 3rem;
+}
+
+.container p {
+    padding-top: 20px;
+}

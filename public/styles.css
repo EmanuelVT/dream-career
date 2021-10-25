@@ -1,0 +1,758 @@
+html {
+    overflow-x: hidden;
+    height: 100%;
+}
+
+body {
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 100%;
+
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.container {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.upper-header {
+    height: 100vh;
+    position: relative;
+
+}
+
+.wrapper {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+
+/* HEADER */
+
+.header {
+    display: flex;
+    flex-direction: column;
+    height: 20vh;
+    background: white;
+}
+
+.header .logo {
+    padding: 7%;
+    font-size: 1.5em;
+    font-family: 'Roboto Slab', serif;
+}
+
+.header .icons {
+    margin: 0 auto;
+    font-size: 1.5em;
+}
+
+.header .icons .icon-link {
+    padding: 10px
+}
+
+.header .icons a {
+    text-decoration: none;
+    color: #4C515D;
+    transition: .2s all ease-in-out;
+
+
+}
+
+.header .icons a:hover {
+    background-color: #2022252d;
+}
+
+/* HERO */
+
+.hero {
+    height: 80vh;
+    background-image: linear-gradient(to top, rgba(245, 246, 252, 0.712), rgba(245, 246, 252, 0.52)), url('hero-img.jpg');
+    background-position: right;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+
+}
+
+.hero-gradient {
+    height: 80vh;
+    background: rgba(255, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    position: absolute;
+}
+
+.hero .hero-content {
+    padding: 7%;
+}
+
+.hero .hero-content .consultation {
+    text-transform: uppercase;
+    padding: 10px 0;
+    font-size: 13px;
+}
+
+.hero .hero-content h1 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+    padding: 10px 0;
+    color: #28324A;
+}
+
+.hero .hero-content .description {
+    font-size: 1.3rem;
+    line-height: 1.4;
+    padding: 30px 0;
+}
+
+.hero .hero-content a {
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+    padding: 15px;
+    background-color: #457A7B;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    font-size: 1.5rem;
+
+}
+
+
+.hero .hero-content a:hover {
+    color: #457A7B;
+    background-color: white;
+    transition: .2s all ease-in-out;
+}
+
+/* FEATURES */
+.features-content {
+    padding: 7%;
+    text-align: center;
+}
+
+.features-content h2 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 2rem;
+    color: #28324A;
+    font-weight: 500;
+    padding-bottom: 1em;
+}
+
+.features-content>p {
+    font-size: 1.3rem;
+    line-height: 1.4;
+    padding: 30px 0;
+    color: #5E6064;
+}
+
+.features-content .features-table {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 18%;
+}
+
+.features-content .features-table .cell {
+    padding: 2em 0;
+    color: #5E6064;
+    border-bottom: 1px solid #457A7B;
+}
+
+.features-content .features-table .cell h3 {
+    padding: .9em 0;
+    font-family: 'Roboto Slab', serif;
+    color: #28324A;
+    font-weight: 500;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+
+
+
+/* DATA */
+
+.data {
+    background-color: #E9EBEE;
+}
+
+.data .data-content {
+    padding: 7%;
+    text-align: center;
+}
+
+.data .data-content .data-table {
+    display: flex;
+    flex-direction: column;
+}
+
+.data .data-content .data-table .data-cell {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.data .data-content .data-table .data-cell h3 {
+    font-family: 'Roboto Slab', serif;
+    color: #28324A;
+    font-weight: 500;
+    font-size: 2.5rem;
+    margin-bottom: .7rem;
+}
+
+.data .data-content .data-table .data-cell p {
+    text-transform: uppercase;
+}
+
+
+/*  BIO */
+
+.bio {
+    height: 100vh;
+}
+
+.bio-content {
+    padding: 7%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+
+}
+
+.bio .bio-content .profile-picture {
+    background-image: url('profile.jpg');
+    background-position: center;
+    background-size: cover;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+}
+
+.bio .bio-content .bio-text h3 {
+    font-family: 'Roboto Slab', serif;
+    color: #28324A;
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+
+.bio .bio-content .bio-text p {
+    font-size: 1.1rem;
+    line-height: 1.4;
+    padding: 30px 0;
+    color: #5E6064;
+}
+
+
+/* ACTION CALL*/
+
+.actioncall {
+    background-color: #28324A;
+    color: white;
+}
+
+.actioncall .actioncall-content {
+    padding: 7%;
+    text-align: center;
+}
+
+.actioncall .actioncall-content h3 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 500;
+    font-size: 2rem;
+    padding-bottom: 3rem;
+}
+
+.actioncall .actioncall-content p {
+    font-size: 1.2rem;
+    padding-bottom: 2.5rem;
+}
+
+.actioncall .actioncall-content .dream {
+    text-transform: uppercase;
+}
+
+.actioncall .actioncall-content a {
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+    padding: 15px;
+    background-color: #457A7B;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.send-button {
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #457A7B;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    font-size: 1rem;
+    border: 0;
+    cursor: pointer;
+}
+
+.actioncall .actioncall-content a:hover {
+    color: #457A7B;
+    background-color: white;
+    transition: .2s all ease-in-out;
+}
+
+/* FOOTER */
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+}
+
+
+/* POP UP */
+
+.gray-screen {}
+
+
+.pop-up {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(7, 7, 7, 0.699);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s all ease-in-out;
+}
+
+
+
+.email-window {
+    width: 80%;
+    height: 60%;
+    background: white;
+    margin: 0 auto;
+}
+
+.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.close-button {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.lni-close {
+    padding: 0;
+    background: gray;
+    border-radius: 50%;
+    margin: 7px;
+    color: white;
+    cursor: pointer;
+}
+
+.popup-content {
+    padding: 30px;
+    text-align: center;
+}
+
+.gone {
+    display: none;
+}
+
+.subscription {
+    padding: 30px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    display: none;
+}
+
+.subscription h3 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    padding-bottom: 3rem;
+}
+
+.subscription h4 {
+    padding-bottom: 3rem;
+}
+
+.popup-content h3 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    padding-bottom: 3rem;
+}
+
+.popup-content .input-email {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 2% 1%;
+}
+
+.popup-content .input-text {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 2% 1%;
+}
+
+.popup-content .send-button {
+    width: 100%;
+    height: 70px;
+}
+
+.popup-content p {
+    margin-top: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: .9rem;
+}
+
+
+
+
+
+/* TABLET VIEW */
+
+@media screen and (min-width: 768px) {
+
+    /* HEADER */
+
+    .upper-header {
+        height: 60vh;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: row;
+        height: 100px;
+        align-items: center;
+    }
+
+    .header .logo {
+        padding: 0;
+        padding-left: 7%;
+        font-size: 1.5em;
+        width: 40vw;
+    }
+
+    .header .icons {
+        padding: 0 7%;
+        width: 80vw;
+        display: flex;
+        justify-content: flex-end;
+        margin: 0;
+    }
+
+    /* HERO */
+
+    .hero {
+        height: 50vh;
+    }
+
+    .hero-content {
+        width: 50%;
+    }
+
+
+    /* FEATURES */
+
+    .features-content .features-table {
+        padding-bottom: 0;
+        flex-direction: row;
+    }
+
+    .features-content .features-table .cell {
+        border-bottom: 0;
+        padding: 2em 1em;
+    }
+
+    .features-content .features-table .cell p {
+        padding-bottom: 20px;
+    }
+
+    .features-content .features-table .cell .bottom-line {
+        width: 50px;
+        height: 30px;
+        border-top: 2px solid #457A7B;
+        margin: 0 auto;
+    }
+
+
+    /* DATA */
+
+    .data .data-content .data-table {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    /* BIO */
+
+    .bio {
+        height: auto;
+    }
+
+    .bio .bio-content {
+        flex-direction: row;
+        align-items: center;
+        height: auto;
+    }
+
+    .bio .bio-content .profile-picture {
+        width: 250px;
+        margin-bottom: 0;
+        border-radius: 0;
+    }
+
+    .bio .bio-content .bio-text {
+        padding-left: 30px;
+    }
+
+    /* ACTION CALL */
+
+    .actioncall .actioncall-content a {
+        display: inline;
+    }
+
+    /*  POPUP */
+
+    .email-window {
+        width: 50%;
+        height: 40%;
+    }
+
+}
+
+
+@media screen and (min-width: 1024px) {
+    .email-window {
+        width: 50%;
+        height: 30%;
+    }
+}
+
+
+
+/* DESKTOP VIEW */
+
+@media screen and (min-width: 1025px) {
+
+    /* HEADER */
+    .upper-header {
+        height: 100vh;
+    }
+
+    .upper-header .header {
+        height: 10vh;
+    }
+
+    /* HERO */
+
+    .hero {
+        height: 90vh;
+    }
+
+    .hero-content {
+        width: 40%;
+    }
+
+    .hero .hero-content .consultation {
+        font-size: 1rem;
+    }
+
+    .hero .hero-content h1 {
+        font-size: 4rem;
+    }
+
+    .hero .hero-content .description {
+        font-size: 2rem;
+    }
+
+    /* FEATURES */
+
+    .features-content h2 {
+        font-size: 3rem;
+    }
+
+    .features-content>p {
+        font-size: 1.8rem;
+    }
+
+    .features-content .features-table .cell h3 {
+        font-size: 2rem;
+    }
+
+    .features-content .features-table .cell p {
+        font-size: 1.3rem;
+        width: 55%;
+        margin: 0 auto;
+        line-height: 1.3;
+    }
+
+    .features-content .features-table .cell .bottom-line {
+        width: 100px;
+
+    }
+
+    /* DATA */
+
+    .data .data-content {
+        padding: 4% 7%;
+        text-align: center;
+    }
+
+    .data .data-content .data-table .data-cell h3 {
+        font-size: 6rem;
+    }
+
+    .data .data-content .data-table .data-cell p {
+        font-size: 1.4rem;
+    }
+
+    /* BIO */
+
+    .bio .bio-content .profile-picture {
+        width: 300px;
+        height: 300px;
+    }
+
+    .bio .bio-content .bio-text {
+        width: 50%;
+    }
+
+    .bio .bio-content .bio-text h3 {
+        font-size: 3rem;
+    }
+
+    .bio .bio-content .bio-text p {
+        font-size: 1.5rem;
+    }
+
+    .bio .bio-content .bio-text {
+        padding-left: 100px;
+    }
+
+    /* ACTION CALL */
+
+    .actioncall .actioncall-content h3 {
+        font-size: 3rem;
+    }
+
+    /* FOOTER */
+    .footer {
+        height: 4rem;
+    }
+
+
+    .email-window {
+        width: 30%;
+        height: 50%;
+    }
+
+}
+
+
+/* NESTHUB */
+
+@media screen and (width: 1024px) and (height: 600px) {
+    .hero {
+        height: 85vh;
+    }
+
+    .features {
+        margin-top: 300px;
+    }
+
+    /*  POPUP */
+
+    .email-window {
+        width: 50%;
+        height: 70%;
+    }
+}
+
+
+/* NESTHUB MAX */
+
+@media screen and (width: 1280px) and (height: 800px) {
+    .hero {
+        height: 85vh;
+    }
+
+    .features {
+        margin-top: 0;
+    }
+
+    /*  POPUP */
+
+    .email-window {
+        width: 50%;
+        height: 60%;
+    }
+}
+
+
+
+
+@media screen and (max-width: 320px) {
+    .hero .hero-content {
+        padding: 7;
+    }
+
+    .hero .hero-content .description {
+        font-size: 1rem;
+    }
+
+    .hero .hero-content a {
+        font-size: 1rem;
+    }
+
+    .email-window {
+        height: 80%;
+    }
+
+
+}
+
+@media screen and (max-width: 280px) {
+    .send-button {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-height: 565px) {
+    .email-window {
+        height: 90%;
+    }
+}
+
+@media screen and (max-height: 372px) {
+    .email-window {
+        height: 100%;
+    }
+}
+
+
+
+.success-h1 {
+    color: red;
+}

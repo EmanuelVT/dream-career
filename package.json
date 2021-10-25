@@ -1,0 +1,29 @@
+{
+  "name": "coach-landing",
+  "version": "1.0.0",
+  "description": "Simple newsletter using Mailchimp",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app",
+    "dev": "nodemon app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EmanuelVT/dream-career.git"
+  },
+  "author": "Emanuel Vasconcelos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EmanuelVT/dream-career/issues"
+  },
+  "homepage": "https://github.com/EmanuelVT/dream-career#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cheerio": "^1.0.0-rc.10",
+    "express": "^4.17.1",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  }
+}
