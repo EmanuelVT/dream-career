@@ -63,6 +63,7 @@ app.post('/signup', (req,res) => {
                 console.log("There was a mistake");
                 console.log(response.statusCode);
                 console.log(api_key);
+                console.log(list_id);
             }
         }
     })
